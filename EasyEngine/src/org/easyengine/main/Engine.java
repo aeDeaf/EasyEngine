@@ -1,12 +1,10 @@
 package org.easyengine.main;
+import static org.lwjgl.opengl.GL11.*;
+import static org.lwjgl.util.glu.GLU.gluPerspective;
+
 import org.lwjgl.LWJGLException;
-import org.lwjgl.Sys;
-import org.lwjgl.input.Keyboard;
 import org.lwjgl.opengl.Display;
 import org.lwjgl.opengl.DisplayMode;
-
-import static org.lwjgl.opengl.GL11.*;
-import static org.lwjgl.util.glu.GLU.*;
 public class Engine {
 	private DisplayMode displayMode;
 	private float r,g,b;
@@ -71,5 +69,9 @@ public class Engine {
 	{
 		Display.destroy();
 		System.exit(0);
+	}
+	public void Draw(EngineObject obj)
+	{
+		obj.Draw();
 	}
 }
